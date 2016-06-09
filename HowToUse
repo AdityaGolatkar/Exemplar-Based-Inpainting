@@ -1,0 +1,11 @@
+(1)Run this command on the matlab terminal first --> mex bestexemplarhelper.c
+(2)Then to perform inpainting on a corrupted image use this --> inpainting('image_name')
+	eg. inpainting('lena.png')
+
+
+
+(3)The variable psz in the inpainting code is the size of the window which is used.
+(4)The color for the corrupted patch used is green with rgb vector value = [0 255 0]
+(5)It is necessary for the image to be a RGB image. If the image is a grayscale image which was the case for the textures , in such cases convert the grayscale to RGB
+	using the function defined "gray2rgb". To use that function first read the grayscale image in a variable say "a".Now run b = gray2rgb(a) on the matlab terminal to get the
+	rgb image pixel value in the variable b. Thus now you can generate corrupted images from b by changing the pixel values using.
